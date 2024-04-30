@@ -1,0 +1,210 @@
+/* Ajustes generales */
+/* estilos.css */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.navbar-logo img {
+    width: 100px; /* Ajusta esto según el tamaño de tu logo */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    padding: 0 15px;
+}
+
+.navbar-links a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    color: #002075;
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.btn-account, .btn-register {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Inicio de boton "Mi cuenta" */
+.btn-account {
+  background-color: #dd6900;
+  color: white;
+  padding: 5px;
+  transition: 0.5s;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+}
+
+.btn-account p {
+  position: absolute;
+  top: 0.4em;
+  left: 1.2em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #002075;
+}
+
+.btn-account svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff
+}
+
+.btn-account:hover p {
+  left: 0.6em;
+  color: #fff
+}
+
+.btn-account:hover svg {
+  opacity: 1;
+}
+
+.btn-account:hover {
+  background-color: #002075;
+}
+/* Cierre de boton "Mi cuenta" */
+
+/* Inicio de boton "Registrarme" */
+.btn-register {
+  background-color: white;
+  color: #dd6900; /* Naranja */
+  border: 2px solid #dd6900; /* Naranja */
+  padding: 5px;
+  transition: 0.5s;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.btn-register p {
+  position: absolute;
+  top: 0.4em;
+  left: 1.2em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #002075;
+}
+
+.btn-register svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff
+}
+
+.btn-register:hover p {
+  left: 0.6em;
+  color: #fff
+}
+
+.btn-register:hover svg {
+  opacity: 1;
+}
+
+.btn-register:hover {
+  background-color: white;
+  color: #002075; /* azul */
+  border: 2px solid #002075; /* azul */
+}
+/* Cierre de boton "Registrarme" */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li, .navbar-buttons {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-account, .btn-register {
+        width: 90%; /* Ajuste para móviles */
+    }
+}
+
