@@ -45,6 +45,7 @@ body {
 .navbar-logo img {
     width: 7rem;
     z-index: 1;
+    
 }
 
 .navbar-buttons {
@@ -163,50 +164,31 @@ body {
 
 
 @media (max-width: 768px) {
-
-  .navbar-logo img {
-    width: 5rem; /* Reduce el tamaño del logo */
-}
-
   .navbar {
       flex-direction: column;
   }
 
-  .navbar-links {
+  .nav__links {
       flex-direction: column;
       width: 100%;
-      margin-bottom: 500px;
-  }
-
-  .navbar-buttons {
-      flex-direction: column; /* Alinea los botones en columna */
-      width: 100%; /* Asegura que ocupen el ancho completo */
-      padding: 0 15px;
   }
 
   .navbar-links li, .navbar-buttons {
       width: 100%;
       text-align: center;
-      margin-top: 5px;
+      margin-top: 10px;
+      padding: 0 15px;
   }
 
   .btn-account, .btn-register {
-      width: 45%; /* Reduce el ancho para que no sean demasiado largos */
-      margin-left: 5%;
-      margin-right: 70%; /* Centra los botones reduciendo el margen derecho */
-      margin-bottom: 20px; /* Añade espacio entre los botones */
+      width: 90%; /* Ajuste para móviles */
   }
 
-  .btn-register {
-      margin-top: 10px; /* Añade margen adicional arriba del segundo botón */
-  }
+  .btn-register{
+    background-color: #edeef3;
 
-  .btn-register {
-    background-color: #fcfcfc;
   }
-  
 }
-
 
 
 *{
@@ -216,7 +198,8 @@ body {
 
 .container{
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
+  height: 100px;
   max-width: 1200px;
   overflow: hidden;
   
@@ -267,9 +250,9 @@ body {
 }
 
 .nav__links{
-  background-color: #fcfcfc;
+  background-color: #edeef3;
   position: absolute;
-  top: 0;
+  top: 15%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -284,7 +267,22 @@ body {
   transition: .3s transform;
 
 }
+.navbar-buttons{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
 
+  display: grid;
+  align-content: center;
+  gap: 2em;
+  padding-left: 5%;
+
+  transform: var(--state-menu);
+  transition: .3s transform;
+}
 .nav__item{
   list-style: none;
 }
