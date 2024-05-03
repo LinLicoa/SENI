@@ -40,38 +40,11 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-}
-
 /* Estilos para la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-}
 
 .navbar-logo img {
-    width: 100px; /* Ajusta esto según el tamaño de tu logo */
-}
-
-.navbar-links {
-    list-style: none;
-    display: flex;
-}
-
-.navbar-links li {
-    padding: 0 15px;
-}
-
-.navbar-links a {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-decoration: none;
-    color: #002075;
+    width: 7rem;
+    z-index: 1;
 }
 
 .navbar-buttons {
@@ -187,24 +160,289 @@ body {
 /* Cierre de boton "Registrarme" */
 
 /* Responsive Design */
+
+
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
 
-    .navbar-links {
-        flex-direction: column;
-        width: 100%;
-    }
+  .navbar-logo img {
+    width: 5rem; /* Reduce el tamaño del logo */
+}
 
-    .navbar-links li, .navbar-buttons {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
+  .navbar {
+      flex-direction: column;
+  }
 
-    .btn-account, .btn-register {
-        width: 90%; /* Ajuste para móviles */
-    }
+  .navbar-links {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 500px;
+  }
+
+  .navbar-buttons {
+      flex-direction: column; /* Alinea los botones en columna */
+      width: 100%; /* Asegura que ocupen el ancho completo */
+      padding: 0 15px;
+  }
+
+  .navbar-links li, .navbar-buttons {
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+  }
+
+  .btn-account, .btn-register {
+      width: 45%; /* Reduce el ancho para que no sean demasiado largos */
+      margin-left: 5%;
+      margin-right: 70%; /* Centra los botones reduciendo el margen derecho */
+      margin-bottom: 20px; /* Añade espacio entre los botones */
+  }
+
+  .btn-register {
+      margin-top: 10px; /* Añade margen adicional arriba del segundo botón */
+  }
+
+  .btn-register {
+    background-color: #fcfcfc;
+  }
+  
+}
+
+
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  
+}
+
+.nav__links, .navbar-buttons {
+  display: flex;
+  align-items: center; /* Esto también alinea los ítems internos de estas divisiones */
+}
+
+.nav{
+  --state-close: scale(0);
+  --state-hamburguer:scale(1);
+  --state-menu: translate(-100%);
+
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(2, max-content);
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.nav:target{
+  --state-menu: translate(0);
+  --state-close: scale(1);
+  --state-hamburguer:scale(0);
+}
+
+.nav__hamburguer, 
+.nav__close{
+  cursor: pointer;
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  transition: .4s transform;
+}
+
+.nav__hamburguer{
+  transform: var(--state-hamburguer);
+}
+
+.nav__close{
+  transform: var(--state-close);
+}
+
+.nav__icon{
+  width: 40px;
+}
+
+.nav__links{
+  background-color: #fcfcfc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+
+  display: grid;
+  align-content: center;
+  gap: 2em;
+  padding-left: 5%;
+
+  transform: var(--state-menu);
+  transition: .3s transform;
+
+}
+
+.nav__item{
+  list-style: none;
+}
+
+.nav__link{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  color: #002075;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .nav{
+      --state-hamburguer:scale(0);
+      --state-menu: translate(0);
+  }
+  
+  .nav:target{
+      --state-close: scale(0);
+  }
+
+  .nav__links{
+      padding: 0;
+      background-color: unset;
+      position: unset;
+      gap: 1.5em;
+      grid-auto-flow: column;
+  
+      transform: unset;
+
+      grid-column: -2/-1;
+      grid-row: 1/2;
+  }
+
+  .nav__link{
+      font-size: 1rem;
+      letter-spacing: none;
+  }
+}
+
+/*EL OTRO CSS*/
+.tracking-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif; /* O la fuente que prefieras */
+  color: #333;
+  background-color: #edeef3;
+}
+.compras-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.galeria-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+.senibox-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+.trabajar-container {
+  width: 100%;
+  height: 100vh;
+  background-color:#dd6900;
+}
+.servicios-container {
+  width: 100%;
+  height: 100vh;
+  background-color:#fdfdfd;
+}
+.contacto-container {
+  width: 100%;
+  height: 50vh;
+  background-color:#002075;
+}
+h2 {
+  color: #0056b3; /* Un azul similar al de tu diseño */
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 300px; /* O el tamaño que prefieras */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.info-card {
+  width: 30%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-card .icon {
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  color: #0056b3;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+      flex-direction: column;
+  }
+
+  .info-card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .search-box {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .search-box input {
+      width: 100%;
+  }
 }
 
