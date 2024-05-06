@@ -332,9 +332,6 @@ body {
   height: 100vh;
   margin: 0 auto;
   text-align: center;
-  font-family: Arial, sans-serif; /* O la fuente que prefieras */
-  color: #333;
-  background-color: #edeef3;
 }
 .compras-container {
   width: 100%;
@@ -390,14 +387,16 @@ body {
   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
   width: 400%;
   line-height: 0;
-  height: 90vh;
 }
 
-.slide-conent img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slide-content img {
+  width: 100%;          /* Asegura que la imagen cubra el ancho completo del contenedor */
+  height: 100%;         /* Asegura que la imagen cubra la altura completa del contenedor */
+  object-fit: contain;  /* Mantiene toda la imagen visible ajustándola dentro del contenedor */
+  object-position: center; /* Centra la imagen dentro de su contenedor */
 }
+
+
 
 #slides .slide {
   width: 25%;
@@ -461,10 +460,10 @@ body {
 }
 #bullets label {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius:100%;
-  background: #ccc;
+  background: #002075;
   margin: 0 10px;
 }
 #slide1:checked ~ #bullets label:nth-child(1),
@@ -499,7 +498,7 @@ body {
 .trabajar-container {
   width: 100%;
   height: 100vh;
-  background-color:#dd6900;
+  background-image: url('../assets/background-image.png');
 }
 .servicios-container {
   width: 100%;
@@ -525,17 +524,18 @@ h2 {
 
 .search-box input {
   padding: 10px;
-  width: 300px; /* O el tamaño que prefieras */
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  width: 40%; /* O el tamaño que prefieras */
+  border: 2px solid #fdfdfd;
+  border-radius: 35px;
 }
 
 .search-box button {
+  width: 10%;
   padding: 10px 20px;
   border: none;
-  background-color: #0056b3;
+  background-color: #002075;
   color: white;
-  border-radius: 5px;
+  border-radius: 35px;
   cursor: pointer;
 }
 
@@ -587,3 +587,565 @@ h2 {
   }
 }
 
+/*EL OTRO CSS*/
+.tracking-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif; /* O la fuente que prefieras */
+  color: #333;
+  background-color: #edeef3;
+}
+.compras-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.galeria-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+.senibox-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+.trabajar-container {
+  width: 100%;
+  height: 100vh;
+  background-color:#dd6900;
+}
+.servicios-container {
+  width: 100%;
+  height: 100vh;
+  background-color:#fdfdfd;
+}
+.contacto {
+  width: 100%;
+  height: 50vh;
+  background-color:#002075;
+}
+
+.tracking-container {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #002075;
+  margin-bottom: 20px;
+  font-size: 45px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 20px 20px;
+  border: 1px solid #edeef3;
+  border-radius: 35px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 100%;
+  color: #1d1d1d;
+
+}
+
+button {
+  background-color: #002075;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 100%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  width: 15%;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 70px 70px;
+  border: 1px solid #002075;
+  border-radius: 35px;
+}
+
+.info-box {
+  max-width: 250px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: #002075;
+
+}
+
+.info-box img {
+  margin-bottom: 10px;
+  height: 48px;
+  width: 48px;
+  
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #002075;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+      grid-template-columns: 1fr;
+  }
+}
+
+/*COMPRAS CONTAINER*/
+.compras-container {
+  background-image: url('../assets/background.png'); /* Asume que tienes una imagen que simula el texto en el fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 4rem;
+  color: #002075;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #dd6900; /* Cambia el código del color según tus preferencias */
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.description-text {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #002075;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  max-width: 25%; /* Limita el ancho del texto */
+}
+
+.product-image {
+  width: 40%; /* Controla el tamaño de la imagen */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2px;
+  }
+  .product-image {
+    width: 100%; /* Controla el tamaño de la imagen */
+    height: auto;
+  }
+  .content {
+      flex-direction: column;
+  }
+
+  .description-text, .product-image {
+      max-width: 90%;
+  }
+  .description-text {
+    text-align: center;
+    width: 100%; /* Limita el ancho del texto */
+    font-size: 1.2rem;
+  }
+  
+}
+
+/*CONTACTO*/
+
+.header img {
+  width: 100%;
+  height: auto;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #002D62; /* Dark blue */
+  color: white;
+}
+
+.company-details h1 {
+  font-size: 2.5rem;
+}
+
+.company-details p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #002D62; /* Blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.location-info {
+  text-align: right;
+}
+
+.location-info h2 {
+  font-size: 2rem;
+}
+
+.location-info p {
+  margin: 5px 0;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .location-info {
+      text-align: center;
+  }
+}
+
+.senibox-container .trabajar-container .servicios-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*SENIBOX*/
+.senibox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
+  max-width: 1200px; /* Ajusta según el ancho deseado del contenedor principal */
+}
+
+.logo img {
+  width: 500px;
+  margin-bottom: 10px; /* Espacio después del logo */
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around; /* Distribuye espacio uniformemente alrededor de los elementos */
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%; /* Asegura que el contenedor de cajas use todo el ancho disponible */
+}
+
+.box {
+  flex-basis: 30%; /* Cada caja ocupa un 30% del espacio disponible */
+  width: 300px;
+  height: 300px; /* Altura fija para cada caja */
+  padding: 50px;
+  margin: 10px; /* Espacio entre las cajas */
+  border-radius: 35px;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fdfdfd; /* Borde para cada caja */
+  background-color: #002D62; /* Color de fondo predeterminado */
+}
+
+.blue-box {
+  background-color: #002D62;
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.orange-box {
+  background-color: #dd6900;
+  text-align: center; /* Texto y contenido centrados */
+}
+
+.centered-content {
+  width: 100%; /* Asegura que el contenido esté centrado horizontalmente */
+}
+
+.image-box {
+  background-color: #333;
+  overflow: hidden;
+  position: relative; /* Posiciona relativamente para asegurar que la imagen se ajuste correctamente */
+  width: 100%; /* Ajusta al contenedor */
+  height: 100%; /* Ajusta al contenedor */
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor, se recorta si es necesario */
+  position: absolute; /* Absoluto respecto a su contenedor relativo */
+  top: 0;
+  left: 0;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .senibox-container {
+      width: 95%;
+  }
+
+  .boxes {
+      flex-direction: column;
+  }
+
+  .box {
+      width: 100%; /* Cada caja toma todo el ancho disponible en pantallas pequeñas */
+      flex-basis: auto; /* Auto-ajuste de la base */
+  }
+
+  .logo img {
+      width: 100%; /* Ajusta el tamaño del logo en dispositivos más pequeños */
+  }
+}
+
+/*TRABAJAR CON NOSOTROS*/
+.trabajar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height */
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.trabajar-title{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: white;
+  font-size: 4rem; /* Ajustable según el tamaño de la pantalla */
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.2em; /* Ajustable según el tamaño de la pantalla */
+  margin-bottom: 20px;
+}
+
+.cajas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que las cajas se apilen verticalmente en pantallas pequeñas */
+}
+
+.caja {
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; /* Espacio entre cajas cuando están apiladas */
+}
+
+.caja img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.caja p {
+  font-size: 0.9em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .cajas {
+      flex-direction: column; /* Apila las cajas verticalmente */
+  }
+
+  .caja {
+      width: 100%; /* Cada caja ocupa todo el ancho disponible */
+      max-width: 340px; /* Limita el ancho máximo para evitar cajas demasiado anchas */
+  }
+
+  h1 {
+      font-size: 1.5em; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+
+  .subtitulo {
+      font-size: 1em; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.2em; /* Reduce aún más el tamaño del título para pantallas muy pequeñas */
+  }
+
+  .subtitulo {
+      font-size: 0.9em; /* Reduce aún más el tamaño del subtítulo para pantallas muy pequeñas */
+  }
+
+  .caja p {
+      font-size: 0.8em; /* Reduce el tamaño del texto en las cajas para una mejor legibilidad */
+  }
+}
+
+.caja1{
+  background-color: white;
+  color:#002075;
+}
+
+.caja2{
+  background-color:  #002075;
+  color: white;
+}
+
+.caja3{
+  background-color: white;
+  color: #002075;
+}
+
+/*SERVICIOS*/
+.servicios-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.servicios-title{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #002075;
+  font-size: 4rem; /* Ajustable según el tamaño de la pantalla */
+}
+
+.servicios-subtitulo{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #dd6900;
+  font-size: 2rem; /* Ajustable según el tamaño de la pantalla */
+  margin-bottom: 50px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tarjeta {
+  justify-content: center;
+  background-color: #dd6900; /* Blanco */
+  color: #ffffff; /* Texto oscuro para contraste */
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta img {
+  width: 70px; /* Ajusta según la necesidad */
+  height: 70px; /* Ajusta según la necesidad */
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .tarjetas {
+      flex-direction: column;
+  }
+
+  .tarjeta {
+      width: 80%; /* Más ancho en pantallas pequeñas */
+      max-width: 340px; /* Mantiene un tamaño máximo razonable */
+  }
+}
