@@ -317,7 +317,6 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   }
   .tracking-container h2 {
     font-size: 1.5rem;
-
   }
 
   .search-box input {
