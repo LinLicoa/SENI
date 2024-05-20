@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:host {
+  font-family: 'Poppins', sans-serif;
+}
+
+.mat-toolbar {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  max-width: 1380px;
+  height: 80px;
+  background-color: #fdfdfd;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.toolbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 8rem;
+  z-index: 1;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: #002075;
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: #dd6900;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.account-button, .register-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: none; /* Quitar sombra */
+}
+
+.account-button {
+  color: white !important;
+  background-color: #dd6900 !important; /* Naranja */
+}
+
+.account-button:hover {
+  background-color: #002075 !important; /* Azul oscuro */
+  box-shadow: none; /* Quitar sombra */
+}
+
+.register-button {
+  border: 2px solid #dd6900 !important; /* Naranja */
+  color: #dd6900 !important; /* Naranja */
+  background-color: white !important;
+}
+
+.register-button:hover {
+  border-color: #002075 !important; /* Azul */
+  color: #002075 !important;
+}
+
+.hamburger-button {
+  display: none;
+  color: #002075;
+}
+
+.hamburger-icon {
+  font-size: 2rem; /* Aumentar el tamaño del icono de hamburguesa */
+  margin-top: 0px;
+}
+
+@media (max-width: 600px) {
+
+  .nav-links,
+  .account-button,
+  .register-button {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .logo {
+    margin: 0 auto 0 0;
+  }
+
+  .hamburger-button {
+    margin-left: auto;
+  }
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.mat-nav-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mat-nav-list a:hover {
+  background-color: rgba(255, 94, 0, 0.04);
+}

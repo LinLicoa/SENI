@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd; /* Light gray background */
+}
+
+.main-container {
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #fdfdfd; /* White background for the main content */
+
+}
+
+.main-content {
+  padding: 20px;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 1000px;
+  }
+}
