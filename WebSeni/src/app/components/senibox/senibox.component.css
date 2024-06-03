@@ -1,0 +1,65 @@
+.senibox-hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.senibox-hero img {
+  width: 100%;
+  height: auto;
+}
+
+.senibox-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Ajusta este valor para el margen izquierdo deseado */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.senibox-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.senibox-hero-text p {
+  font-size: 1.5rem;
+}
+
+.senibox-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.senibox-section h2 {
+  font-size: 2rem;
+  color: #002f87;
+  margin-bottom: 2rem;
+}
+
+.senibox-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.senibox-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.senibox-option p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+}

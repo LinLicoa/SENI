@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { GoogleMap } from '@angular/google-maps';
 
 @Component({
   selector: 'app-contacto',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
+  @ViewChild(GoogleMap) googleMap!: GoogleMap;
 
+  center: google.maps.LatLngLiteral = { lat: -2.161944, lng: -79.904639 };
+  zoom = 15;
+  options: google.maps.MapOptions = {
+    mapTypeId: 'roadmap',
+    zoomControl: true,
+    scrollwheel: true,
+    disableDoubleClickZoom: true,
+    maxZoom: 20,
+    minZoom: 8,
+  };
 }

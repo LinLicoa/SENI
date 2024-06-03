@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,10 @@ import { CourierInternacionalComponent } from './components/servicios/courier-in
 import { TransporteCargaInternacionalComponent } from './components/servicios/transporte-carga-internacional/transporte-carga-internacional.component';
 import { TramitesAduanerosLogisticaComponent } from './components/servicios/tramites-aduaneros-logistica/tramites-aduaneros-logistica.component';
 
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AdvancedMarkerDirective } from './directives/advanced-marker.directive';
+import { HomeComponent } from './components/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +36,9 @@ import { TramitesAduanerosLogisticaComponent } from './components/servicios/tram
     RegistrarmeComponent,
     CourierInternacionalComponent,
     TransporteCargaInternacionalComponent,
-    TramitesAduanerosLogisticaComponent
+    TramitesAduanerosLogisticaComponent,
+    AdvancedMarkerDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,9 @@ import { TramitesAduanerosLogisticaComponent } from './components/servicios/tram
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    GoogleMapsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

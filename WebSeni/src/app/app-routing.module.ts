@@ -8,8 +8,10 @@ import { RegistrarmeComponent } from './components/registrarme/registrarme.compo
 import { CourierInternacionalComponent } from './components/servicios/courier-internacional/courier-internacional.component';
 import { TransporteCargaInternacionalComponent } from './components/servicios/transporte-carga-internacional/transporte-carga-internacional.component';
 import { TramitesAduanerosLogisticaComponent } from './components/servicios/tramites-aduaneros-logistica/tramites-aduaneros-logistica.component';
+import { HomeComponent } from './components/home/home.component';  // Importa el nuevo componente
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },  // Ruta por defecto
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },
   { path: 'senibox', component: SeniboxComponent },
   { path: 'contacto', component: ContactoComponent },
@@ -18,8 +20,7 @@ const routes: Routes = [
   { path: 'servicios/courier-internacional', component: CourierInternacionalComponent },
   { path: 'servicios/transporte-carga-internacional', component: TransporteCargaInternacionalComponent },
   { path: 'servicios/tramites-aduaneros-logistica', component: TramitesAduanerosLogisticaComponent },
-  { path: '', redirectTo: '/sobre-nosotros', pathMatch: 'full' },
-  { path: '**', redirectTo: '/sobre-nosotros' }
+  { path: '**', redirectTo: '' }  // Redirige cualquier ruta no reconocida a HomeComponent
 ];
 
 @NgModule({

@@ -25,7 +25,9 @@
   width: 8rem;
   z-index: 1;
 }
-
+.logo {
+  cursor: pointer; /* Asegúrate de que el logo sea clickable */
+}
 .spacer {
   flex: 1 1 auto;
 }
