@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { GoogleMap } from '@angular/google-maps';
 
 @Component({
@@ -19,4 +19,22 @@ export class ContactoComponent {
     maxZoom: 20,
     minZoom: 8,
   };
+
+  ngAfterViewInit() {
+    if(this.googleMap) {
+      this.addMarker();
+    }
+  }
+
+  addMarker() {
+    const marker = new google.maps.Marker({
+      position: this.center,
+      map: this.googleMap.googleMap!,
+      title: 'SENIBOX',
+    })
+
+    marker.addListener('click', ()=> {
+      window.open(`https://maps.google.com/?q=${this.center.lat},${this.center.lng}`, '_blank');
+    })
+  }
 }
