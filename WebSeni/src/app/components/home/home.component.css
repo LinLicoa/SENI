@@ -952,10 +952,10 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   background-color: #fdfdfd;
 }
 
-.servicios-container h2 {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #002075;
+.servicios-container .logo-logistic {
+  width: 500px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto;
+  margin-bottom: 0px;
 }
 
 .servicios-container .subtitulo {
@@ -963,6 +963,7 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   font-weight: 700;
   color: #cb6103;
   margin-bottom: 40px;
+  margin-top: 0px;
 }
 
 .servicios-grid {
@@ -1065,6 +1066,8 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .contacto-bg {

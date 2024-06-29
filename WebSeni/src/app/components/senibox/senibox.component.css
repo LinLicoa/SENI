@@ -1,3 +1,4 @@
+/* SENIbox Hero */
 .senibox-hero {
   position: relative;
   text-align: center;
@@ -12,7 +13,7 @@
 .senibox-hero-text {
   position: absolute;
   top: 50%;
-  left: 10%; /* Ajusta este valor para el margen izquierdo deseado */
+  left: 10%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -29,37 +30,173 @@
   font-size: 1.5rem;
 }
 
+/* SENIbox Section */
 .senibox-section {
+  background-color: #fdfdfd;
   text-align: center;
-  margin: 2rem 0;
-}
-
-.senibox-section h2 {
-  font-size: 2rem;
-  color: #002f87;
-  margin-bottom: 2rem;
-}
-
-.senibox-options {
+  padding: 150px 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-}
-
-.senibox-option {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.option-icon {
-  width: 100px;
-  height: 100px;
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.senibox-option p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #555;
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #002075;
+  margin-bottom: 20px;
+}
+
+.svg-container {
+  position: relative;
+}
+
+.centered-svg {
+  width: 50vw;
+  height: auto;
+  display: none;
+}
+
+.default-svg {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .centered-svg {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 1.6em;
+  }
+
+  .centered-svg {
+    width: 85vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2em;
+  }
+
+  .centered-svg {
+    width: 70vw;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+  }
+
+  .centered-svg {
+    width: 75vw;
+  }
+
+  .default-svg {
+    display: none;
+  }
+
+  .responsive-svg {
+    display: block;
+  }
+}
+
+/* Nueva Sección */
+.new-section {
+  background-color: #edeef3; /* Cambia esto por el color de fondo deseado */
   text-align: center;
+  padding: 70px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1200px; /* Ajusta este valor según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* Márgenes laterales */
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  color: #002075;
+  margin-bottom: 0px; /* Ajusta este valor según sea necesario */
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #002075;
+  margin-top: 0; /* Asegúrate de que no haya margen superior */
+}
+
+.svg-container {
+  width: 100%;
+  margin-top: 20px; /* Ajusta el margen superior si deseas más separación */
+  display: flex;
+  justify-content: center;
+}
+
+.section-svg {
+  width: 50%; /* Aumenta el tamaño del SVG */
+  height: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 6rem;
+  }
+
+  .section-subtitle {
+    font-size: 2rem;
+  }
+
+  .section-svg {
+    width: 70%; /* Ajusta el tamaño del SVG para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .section-svg {
+    width: 90%; /* Ajusta el tamaño del SVG para pantallas muy pequeñas */
+  }
 }

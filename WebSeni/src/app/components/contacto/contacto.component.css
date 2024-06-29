@@ -1,3 +1,4 @@
+/* Contacto Container */
 .contacto-container {
   background-color: #0a1149; /* Fondo azul oscuro */
   padding: 50px 20px;
@@ -12,6 +13,10 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* Máximo ancho para evitar que se extienda demasiado */
+  padding: 0 20px; /* Márgenes izquierda y derecha */
 }
 
 .contacto-info {
@@ -31,16 +36,6 @@
   margin-bottom: 20px;
 }
 
-.contacto-button {
-  background-color: #fff;
-  color: #0a1149;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 .contacto-ubicacion {
   flex: 1;
   margin: 20px;
@@ -56,6 +51,13 @@
 .contacto-ubicacion p {
   font-size: 1rem;
   margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contacto-ubicacion img {
+  width: 20px; /* Tamaño de los íconos */
+  margin-right: 10px;
 }
 
 .contacto-mapa {
@@ -70,9 +72,32 @@
   background-color: #0a1149; /* Fondo azul oscuro */
   padding: 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid #fff; /* Línea blanca */
+  flex-wrap: wrap;
+  max-width: 1200px; /* Máximo ancho para evitar que se extienda demasiado */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px; /* Márgenes izquierda y derecha */
+}
+
+.contacto-button {
+  background-color: #fff;
+  color: #0a1149;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: auto; /* Mueve el botón a la izquierda */
+  margin-bottom: 10px; /* Espacio inferior para separar del resto en móvil */
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .social-link {
@@ -92,6 +117,11 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contacto-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .contacto-info, .contacto-ubicacion {
     max-width: 100%;
   }
@@ -116,5 +146,44 @@
   .social-link img {
     width: 30px;
     height: 30px;
+  }
+
+  .contacto-redes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .contacto-container p {
+    font-size: 0.9rem;
+  }
+
+  .contacto-mapa {
+    height: 150px;  /* Tamaño del mapa para pantallas muy pequeñas */
+  }
+
+  .contacto-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .social-link img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contacto-info p {
+    font-size: 1rem;
   }
 }
