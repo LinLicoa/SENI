@@ -762,12 +762,12 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  justify-content: left;
 }
 
 .blue-box {
   background-color: #002075;
   color: #fdfdfd;
-  text-align: left; /* Align text to the left */
   font-size: 2rem;
 }
 
@@ -775,14 +775,10 @@ input[name="slider"]:nth-of-type(4):checked ~ #slides .inner {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left; /* Align text to the left */
 }
 
 .blue-box ul li {
-  margin-left: 40px;
   font-size: 1.8rem;
-  text-align: left; /* Align text to the left */
-  justify-content: left;
 }
 
 .image-box img {

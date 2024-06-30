@@ -37,4 +37,9 @@ export class ContactoComponent {
       window.open(`https://maps.google.com/?q=${this.center.lat},${this.center.lng}`, '_blank');
     })
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
 }

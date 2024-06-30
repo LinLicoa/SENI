@@ -1,6 +1,144 @@
 .sobre-nosotros-container {
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.floating-card-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.floating-card {
+  background: url('../../../assets/comillas.jpg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #0a1149;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: -50px auto 0; /* Ajustar el margen para la posición de la tarjeta flotante */
+  position: absolute; /* Cambiado a absolute */
+  top: 100%; /* Ajustar para que la tarjeta se superponga a las dos secciones */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.quote-content {
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.floating-card p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.quote-author {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #555;
+}
+
+.info-container {
+  background: linear-gradient(to top left, #002075 55%, #f5f5f5 55%);
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  color: white;
+  position: relative;
+  height: 60vh; /* Ajustar la altura según sea necesario */
+  margin-top: 50px; /* Espacio para la tarjeta flotante */
+}
+
+.section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mission {
+  text-align: left;
+  margin-top: -15rem; /* Mover el texto de la misión más arriba */
+}
+
+.vision {
+  text-align: right;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+}
+
+.mission .icon-title {
+  justify-content: flex-start;
+}
+
+.vision .icon-title {
+  justify-content: flex-end;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.mission h2 {
+  color: #dd6900;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.vision h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.mission p {
+  color: #002075;
+  margin: 30px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.vision p {
+  color: inherit;
+  margin: 30px 0 0 0;
+  font-size: 1.2rem;
+}
+
+/*---------------------------------------*/
+
+.info-container {
+  background: linear-gradient(to top left, #002075 55%, #f5f5f5 55%);
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  color: white;
+  position: relative;
+  height: 60vh; /* Ajustar la altura según sea necesario */
+}
+
+.section {
+  width: 40%; /* Ajustar el ancho de las secciones */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px; /* Añadir padding para margen dentro de las secciones */
+  box-sizing: border-box; /* Asegurar que el padding no afecte el ancho */
 }
 
 .background-image {
@@ -17,18 +155,18 @@
 .text-content {
   color: white;
   text-align: right;
-  max-width: 750px; /* Ajusta el ancho máximo según sea necesario */
-  margin-right: 40px; /* Agrega más margen a la derecha */
+  max-width: 550px; /* Ajusta el ancho máximo según sea necesario */
+  margin-right: 30px; /* Agrega más margen a la derecha */
 }
 
 .text-content h1 {
-  font-size: 4rem; /* Tamaño más grande del título */
+  font-size: 3rem; /* Tamaño más grande del título */
   font-weight: 900;
   margin-bottom: 30px;
 }
 
 .text-content p {
-  font-size: 1.5rem; /* Tamaño más grande del cuerpo */
+  font-size: 1.3rem; /* Tamaño más grande del cuerpo */
   margin-bottom: 20px;
 }
 
@@ -76,173 +214,338 @@
   font-weight: bold;
 }
 
+/*------------------------EMPIEZA INFO CONTAINER------------------------*/
 .info-container {
-  background: url('../../../assets/1x/bgazul.png') no-repeat center center; /* Asegúrate de que la ruta sea correcta */
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-  padding: 60px 20px;
-  text-align: center;
+  background: linear-gradient(to top left, #001d6e 55%, #fdfdfd 55%);
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
   color: white;
   position: relative;
+  height: 60vh; /* Ajustar la altura según sea necesario */
 }
 
 .section {
-  margin-bottom: 60px;
+  width: 40%; /* Ajustar el ancho de las secciones */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px; /* Añadir padding para margen dentro de las secciones */
+  box-sizing: border-box; /* Asegurar que el padding no afecte el ancho */
 }
 
-.section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.mission {
+  text-align: left;
+  margin-top: -15rem; /* Mover el texto de la misión más arriba */
 }
 
-.section p {
+.vision {
+  text-align: right;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+}
+
+.mission .icon-title {
+  justify-content: flex-start;
+}
+
+.vision .icon-title {
+  justify-content: flex-end;
+}
+
+.icon {
+  width: 45px; /* Ajustar el tamaño del icono según sea necesario */
+  height: 45px; /* Ajustar el tamaño del icono según sea necesario */
+  margin-right: 10px;
+}
+
+.mission h2 {
+  color: #dd6900; /* Color naranja para el título de misión */
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.vision h2 {
+  color: #ffffff; /* Color blanco para el título de visión */
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.mission p {
+  color: #002075; /* Color negro para el párrafo de misión */
+  margin: 30px 0 0 0; /* Añadir margen a los párrafos de texto */
   font-size: 1.2rem;
 }
 
-.section .icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.vision p {
+  color: inherit;
+  margin: 30px 0 0 0; /* Añadir margen a los párrafos de texto */
+  font-size: 1.2rem;
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .info-container {
+    background: linear-gradient(to bottom, #f5f5f5 50%, #002075 50%);
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    height: auto;
+  }
+
+  .section {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .mission {
+    text-align: center;
+    margin-top: 0; /* Restablecer el margen superior */
+  }
+
+  .vision {
+    text-align: center;
+  }
+
+  .mission .icon-title,
+  .vision .icon-title {
+    justify-content: center;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .mission h2 {
+    color: #dd6900; /* Color naranja para el título de misión */
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+  
+  .vision h2 {
+    color: #ffffff; /* Color blanco para el título de visión */
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+  
+  .mission p {
+    color: #002075; /* Color negro para el párrafo de misión */
+    margin: 30px 0 0 0; /* Añadir margen a los párrafos de texto */
+    font-size: 1.2rem;
+  }
+  
+  .vision p {
+    color: inherit;
+    margin: 30px 0 0 0; /* Añadir margen a los párrafos de texto */
+    font-size: 1.2rem;
+  }
+}
+
+
+/*------------------------TERMINA INFO CONTAINER------------------------*/
+
+/*------------------------COMIENZA .values-container------------------------*/
 .values-container {
-  background: white;
+  background: #001d6e;
   padding: 60px 20px;
   text-align: center;
+}
+
+.values-container h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 40px;
 }
 
 .values-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px; /* Espacio constante entre las tarjetas horizontal y verticalmente */
+  max-width: 800px; /* Ajustar el ancho máximo del grid */
+  margin: 0 auto; /* Centrar el grid horizontalmente */
 }
 
 .value-item {
   background: white;
   color: #002075;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  flex: 1;
-  min-width: 200px;
+  width: calc(50% - 20px); /* Ancho de cada tarjeta */
+  box-sizing: border-box;
 }
 
+.value-item h3 {
+  color: #dd6900; /* Título naranja */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.value-item p {
+  margin: 5px 0;
+  color: #002075; /* Texto azul */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .values-container {
+    padding: 30px 10px;
+  }
+
+  .values-container h2 {
+    font-size: 2rem;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    gap: 20px; /* Mantener el espacio constante entre las tarjetas */
+  }
+
+  .value-item {
+    width: 100%; /* Ancho completo para las tarjetas en móviles */
+  }
+
+  .value-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .value-item p {
+    font-size: 1rem;
+  }
+}
+
+/*------------------------TERMINA .values-container------------------------*/
+
+/*------------------------COMIENZA .social-responsibility-container------------------------*/
 .social-responsibility-container {
-  background: #002075;
+  background: #001d6e;
   padding: 60px 20px;
   text-align: center;
   color: white;
 }
 
+.social-responsibility-container h2 {
+  font-size: 2.5rem; /* Título grande blanco */
+  margin-bottom: 5px;
+}
+
+.social-responsibility-container p {
+  font-size: 1.5rem; /* Subtítulo mediano blanco */
+  margin-bottom: 50px;
+}
+
 .social-initiatives {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto; /* Centrar las iniciativas */
 }
 
 .initiative {
-  background: white;
-  color: #002075;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  flex: 1;
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 calc(50% - 20px); /* Dos tarjetas lado a lado con espacio entre ellas */
+  background: none; /* Sin fondo */
+  color: white;
 }
 
-.initiative i {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.initiative img.icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.initiative h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+}
+
+.initiative p {
+  font-size: 1rem;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .background-image {
-    padding-right: 80px; /* Ajusta el margen derecho */
-  }
-
-  .text-content h1 {
-    font-size: 3rem; /* Tamaño más pequeño del título */
-  }
-
-  .text-content p {
-    font-size: 1rem; /* Tamaño más pequeño del cuerpo */
-  }
-
-  .text-content {
-    max-width: 500px; /* Ajusta el ancho máximo según sea necesario */
-    margin-right: 40px; /* Agrega más margen a la derecha */
-  }
-  .info-content h2 {
-    font-size: 2rem;
-  }
-
-  .value-item, .initiative {
-    max-width: 45%;
-  }
-}
-
 @media (max-width: 768px) {
-  .background-image {
-    justify-content: center;
-    padding: 0 40px; /* Ajusta el padding lateral */
+  .social-initiatives {
+    flex-direction: column;
   }
 
-  .text-content {
-    text-align: center; /* Centrar el texto en pantallas pequeñas */
-    margin-right: 0; /* Quita el margen derecho */
-  }
-
-  .text-content h1 {
-    font-size: 3rem; /* Tamaño más grande del título */
-  }
-
-  .text-content p {
-    font-size: 1.2rem; /* Tamaño más grande del cuerpo */
-  }
-
-  .quote-box {
-    padding: 15px;
-  }
-
-  .quote-box::before, .quote-box::after {
-    font-size: 3rem;
-  }
-
-  .section h2 {
-    font-size: 1.8rem;
-  }
-
-  .value-item, .initiative {
-    max-width: 90%;
+  .initiative {
+    flex: 1 1 100%; /* Cada tarjeta ocupa el ancho completo en móviles */
   }
 }
+/*------------------------TERMINA .social-responsibility-container------------------------*/
 
-@media (max-width: 480px) {
-  .background-image {
-    padding: 0 20px; /* Ajusta el padding lateral */
-  }
+.security-policy-container {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  color: #0a1149;
+}
 
-  .text-content h1 {
-    font-size: 2.5rem; /* Tamaño más grande del título */
-  }
+.security-policy-container h2 {
+  color: #001d6e;
+  font-size: 2.5rem;
+  font-weight: 900; /* Super bold */
+  margin-bottom: 40px;
+}
 
-  .text-content p {
-    font-size: 1.1rem; /* Tamaño más grande del cuerpo */
-  }
+.policy-content {
+  max-width: 800px; /* Menor ancho para el contenedor del texto */
+  margin: 0 auto; /* Centrar el contenedor */
+  text-align: center; /* Centrar el texto */
+}
 
-  .quote-box {
-    padding: 10px;
-  }
+.policy-content h3 {
+  color: #ca6103;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  .quote-box::before, .quote-box::after {
-    font-size: 2rem;
-  }
+.policy-content p {
+  color: #0a1149;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: justify; /* Justificar el texto para mejor legibilidad */
+}
 
-  .section h2 {
-    font-size: 1.5rem;
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #002075;
+  color: white;
+  border-radius: 25px; /* Bordes redondeados */
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background: #001d6e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policy-content p {
+    text-align: justify;
   }
 }
